@@ -1,6 +1,6 @@
 /* ============================================
    MuslimSolo.id — Link-in-Bio Landing Page
-   Dark Mode · Islamic Minimalist · Mobile-First
+   Light Mode · Sakinah Green · Islamic Minimalist · Mobile-First
    ============================================ */
 
 /* ---------- Google Fonts ---------- */
@@ -8,28 +8,29 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Colors */
-  --clr-bg:          #0a1a0a;
-  --clr-bg-card:     #111e11;
-  --clr-surface:     #162816;
-  --clr-surface-alt: #1d3520;
-  --clr-primary:     #1b5e20;
-  --clr-primary-lt:  #2e7d32;
-  --clr-gold:        #c9a84c;
-  --clr-gold-lt:     #dfc06a;
-  --clr-text:        #e8efe8;
-  --clr-text-muted:  #9ab89a;
-  --clr-border:      rgba(201, 168, 76, 0.15);
-  --clr-glow:        rgba(201, 168, 76, 0.08);
+  /* Colors — Light Sakinah Theme */
+  --clr-bg:          #f5f9f5;
+  --clr-bg-card:     #ffffff;
+  --clr-surface:     #f0f5f0;
+  --clr-surface-alt: #e6efe6;
+  --clr-primary:     #2e7d52;
+  --clr-primary-lt:  #43a06e;
+  --clr-primary-dk:  #1b5e3a;
+  --clr-accent:      #3cb07a;
+  --clr-accent-lt:   #7cd4a8;
+  --clr-text:        #1e3a2e;
+  --clr-text-muted:  #5d8a72;
+  --clr-border:      rgba(46, 125, 82, 0.12);
+  --clr-glow:        rgba(60, 176, 122, 0.10);
 
   /* Brand Colors */
   --clr-youtube:     #FF0000;
   --clr-instagram:   linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   --clr-facebook:    #1877F2;
-  --clr-threads:     #ffffff;
+  --clr-threads:     #000000;
   --clr-whatsapp:    #25D366;
-  --clr-kajian:      var(--clr-gold);
-  --clr-jadwal:      var(--clr-primary-lt);
+  --clr-kajian:      var(--clr-primary);
+  --clr-jadwal:      var(--clr-accent);
 
   /* Typography */
   --ff-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -50,10 +51,10 @@
   --radius-xl:  28px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-btn:   0 4px 15px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px var(--clr-glow);
-  --shadow-card:  0 8px 32px rgba(0, 0, 0, 0.4);
+  /* Shadows — soft & airy for light theme */
+  --shadow-btn:   0 2px 8px rgba(46, 125, 82, 0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-hover: 0 8px 24px rgba(46, 125, 82, 0.12), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-card:  0 4px 24px rgba(46, 125, 82, 0.06), 0 1px 4px rgba(0,0,0,0.03);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -83,6 +84,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Subtle gradient background */
+  background-image: 
+    radial-gradient(ellipse at 20% 0%, rgba(60, 176, 122, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(46, 125, 82, 0.04) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
 a {
@@ -95,19 +101,19 @@ img {
   display: block;
 }
 
-/* ---------- Background Pattern ---------- */
+/* ---------- Background Pattern — Islamic Geometric ---------- */
 .bg-pattern {
   position: fixed;
   inset: 0;
-  background-image: url('assets/pattern-bg.png');
-  background-size: 400px;
-  background-repeat: repeat;
-  opacity: 0.04;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%232e7d52' stroke-width='0.6'%3E%3C!-- 8-point star center --%3E%3Cpolygon points='40,10 45,20 55,15 50,25 60,30 50,35 55,45 45,40 40,50 35,40 25,45 30,35 20,30 30,25 25,15 35,20'/%3E%3C!-- diamond lattice --%3E%3Cline x1='40' y1='0' x2='80' y2='40'/%3E%3Cline x1='80' y1='40' x2='40' y2='80'/%3E%3Cline x1='40' y1='80' x2='0' y2='40'/%3E%3Cline x1='0' y1='40' x2='40' y2='0'/%3E%3C!-- inner cross --%3E%3Cline x1='40' y1='0' x2='40' y2='80'/%3E%3Cline x1='0' y1='40' x2='80' y2='40'/%3E%3C!-- corner arcs --%3E%3Ccircle cx='0' cy='0' r='16'/%3E%3Ccircle cx='80' cy='0' r='16'/%3E%3Ccircle cx='0' cy='80' r='16'/%3E%3Ccircle cx='80' cy='80' r='16'/%3E%3C!-- center circle --%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  background-repeat: repeat;
 }
 
-/* Ambient glow orbs */
+/* Ambient glow orbs — soft & light */
 .bg-glow {
   position: fixed;
   border-radius: 50%;
@@ -122,7 +128,7 @@ img {
   top: -150px;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(27, 94, 32, 0.25), transparent 70%);
+  background: radial-gradient(circle, rgba(60, 176, 122, 0.12), transparent 70%);
 }
 
 .bg-glow--bottom {
@@ -130,7 +136,7 @@ img {
   height: 400px;
   bottom: -100px;
   right: -100px;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(46, 125, 82, 0.08), transparent 70%);
 }
 
 /* ---------- Main Container ---------- */
@@ -169,8 +175,8 @@ img {
   height: 100px;
   border-radius: 50%;
   margin: 0 auto var(--space-lg);
-  border: 3px solid var(--clr-gold);
-  box-shadow: 0 0 20px rgba(201, 168, 76, 0.2), 0 0 40px rgba(201, 168, 76, 0.08);
+  border: 3px solid var(--clr-accent);
+  box-shadow: 0 0 16px rgba(60, 176, 122, 0.15), 0 0 32px rgba(60, 176, 122, 0.06);
   overflow: hidden;
   animation: fadeInDown 0.6s var(--ease-out) 0.2s both;
   transition: transform var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out);
@@ -178,7 +184,7 @@ img {
 
 .profile__avatar:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(201, 168, 76, 0.35), 0 0 60px rgba(201, 168, 76, 0.12);
+  box-shadow: 0 0 24px rgba(60, 176, 122, 0.25), 0 0 48px rgba(60, 176, 122, 0.10);
 }
 
 .profile__avatar img {
@@ -192,7 +198,7 @@ img {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-xs);
-  background: linear-gradient(135deg, var(--clr-text) 0%, var(--clr-gold) 100%);
+  background: linear-gradient(135deg, var(--clr-text) 0%, var(--clr-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -202,7 +208,7 @@ img {
 .profile__tagline {
   font-family: var(--ff-serif);
   font-size: 0.95rem;
-  color: var(--clr-gold);
+  color: var(--clr-primary);
   letter-spacing: 0.03em;
   animation: fadeInDown 0.6s var(--ease-out) 0.5s both;
 }
@@ -219,12 +225,12 @@ img {
 .divider__line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
-  opacity: 0.3;
+  background: linear-gradient(90deg, transparent, var(--clr-accent), transparent);
+  opacity: 0.35;
 }
 
 .divider__icon {
-  color: var(--clr-gold);
+  color: var(--clr-accent);
   font-size: 1.1rem;
   opacity: 0.6;
 }
@@ -246,7 +252,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--clr-gold);
+  color: var(--clr-primary);
   opacity: 0.6;
   text-align: center;
   margin-bottom: var(--space-md);
@@ -269,8 +275,8 @@ img {
   width: 100%;
   padding: 15px 20px;
   border-radius: var(--radius-md);
-  background: var(--clr-surface);
-  border: 1px solid var(--clr-border);
+  background: var(--clr-bg-card);
+  border: 2.5px solid rgba(46, 125, 82, 0.25);
   cursor: pointer;
   transition: all var(--duration) var(--ease-out);
   box-shadow: var(--shadow-btn);
@@ -293,7 +299,7 @@ img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  background: linear-gradient(90deg, transparent, rgba(60, 176, 122, 0.06), transparent);
   transition: left 0.5s var(--ease-out);
 }
 
@@ -304,7 +310,7 @@ img {
 .link-btn:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(46, 125, 82, 0.4);
 }
 
 .link-btn:active {
@@ -342,47 +348,48 @@ img {
   font-weight: 600;
   letter-spacing: 0.01em;
   padding-right: 38px; /* Offset for visual centering */
+  color: var(--clr-text);
 }
 
 /* Brand-specific icon backgrounds */
 .link-btn--youtube .link-btn__icon {
-  background: rgba(255, 0, 0, 0.15);
+  background: rgba(255, 0, 0, 0.08);
   color: var(--clr-youtube);
 }
 .link-btn--youtube:hover {
-  background: linear-gradient(135deg, var(--clr-surface), rgba(255, 0, 0, 0.08));
+  background: linear-gradient(135deg, #fff, rgba(255, 0, 0, 0.04));
 }
 
 .link-btn--instagram .link-btn__icon {
-  background: linear-gradient(45deg, rgba(240, 148, 51, 0.2), rgba(220, 39, 67, 0.2), rgba(188, 24, 136, 0.2));
+  background: linear-gradient(45deg, rgba(240, 148, 51, 0.12), rgba(220, 39, 67, 0.12), rgba(188, 24, 136, 0.12));
   color: #e1306c;
 }
 .link-btn--instagram:hover {
-  background: linear-gradient(135deg, var(--clr-surface), rgba(225, 48, 108, 0.08));
+  background: linear-gradient(135deg, #fff, rgba(225, 48, 108, 0.04));
 }
 
 .link-btn--facebook .link-btn__icon {
-  background: rgba(24, 119, 242, 0.15);
+  background: rgba(24, 119, 242, 0.08);
   color: var(--clr-facebook);
 }
 .link-btn--facebook:hover {
-  background: linear-gradient(135deg, var(--clr-surface), rgba(24, 119, 242, 0.08));
+  background: linear-gradient(135deg, #fff, rgba(24, 119, 242, 0.04));
 }
 
 .link-btn--threads .link-btn__icon {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   color: var(--clr-threads);
 }
 .link-btn--threads:hover {
-  background: linear-gradient(135deg, var(--clr-surface), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(135deg, #fff, rgba(0, 0, 0, 0.03));
 }
 
 .link-btn--whatsapp .link-btn__icon {
-  background: rgba(37, 211, 102, 0.15);
+  background: rgba(37, 211, 102, 0.10);
   color: var(--clr-whatsapp);
 }
 .link-btn--whatsapp:hover {
-  background: linear-gradient(135deg, var(--clr-surface), rgba(37, 211, 102, 0.08));
+  background: linear-gradient(135deg, #fff, rgba(37, 211, 102, 0.05));
 }
 
 /* ---------- Optional / Secondary Buttons ---------- */
@@ -393,27 +400,27 @@ img {
 
 .links--secondary .link-btn {
   background: transparent;
-  border: 1px solid var(--clr-border);
+  border: 2.5px solid rgba(46, 125, 82, 0.25);
   box-shadow: none;
   padding: 13px 20px;
 }
 
 .link-btn--kajian .link-btn__icon {
-  background: rgba(201, 168, 76, 0.15);
-  color: var(--clr-gold);
+  background: rgba(46, 125, 82, 0.10);
+  color: var(--clr-primary);
 }
 .link-btn--kajian:hover {
-  background: rgba(201, 168, 76, 0.06);
-  border-color: var(--clr-gold);
+  background: rgba(46, 125, 82, 0.04);
+  border-color: var(--clr-primary);
 }
 
 .link-btn--jadwal .link-btn__icon {
-  background: rgba(46, 125, 50, 0.2);
-  color: var(--clr-primary-lt);
+  background: rgba(60, 176, 122, 0.10);
+  color: var(--clr-accent);
 }
 .link-btn--jadwal:hover {
-  background: rgba(46, 125, 50, 0.06);
-  border-color: var(--clr-primary-lt);
+  background: rgba(60, 176, 122, 0.04);
+  border-color: var(--clr-accent);
 }
 
 .links--secondary .link-btn:nth-child(1) { animation: fadeInUp 0.5s var(--ease-out) 1.35s both; }
@@ -445,15 +452,15 @@ img {
 }
 
 .footer__copy span {
-  color: var(--clr-gold);
-  opacity: 0.7;
+  color: var(--clr-primary);
+  opacity: 0.8;
 }
 
 /* ---------- Ripple Effect ---------- */
 .ripple {
   position: absolute;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.15);
+  background: rgba(60, 176, 122, 0.15);
   transform: scale(0);
   animation: ripple-anim 0.6s linear;
   pointer-events: none;
@@ -496,10 +503,10 @@ img {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(201, 168, 76, 0.2), 0 0 40px rgba(201, 168, 76, 0.08);
+    box-shadow: 0 0 16px rgba(60, 176, 122, 0.15), 0 0 32px rgba(60, 176, 122, 0.06);
   }
   50% {
-    box-shadow: 0 0 30px rgba(201, 168, 76, 0.3), 0 0 60px rgba(201, 168, 76, 0.12);
+    box-shadow: 0 0 24px rgba(60, 176, 122, 0.25), 0 0 48px rgba(60, 176, 122, 0.10);
   }
 }
 
@@ -555,7 +562,7 @@ img {
 
 /* Focus states */
 .link-btn:focus-visible {
-  outline: 2px solid var(--clr-gold);
+  outline: 2px solid var(--clr-primary);
   outline-offset: 2px;
 }
 
@@ -569,16 +576,16 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--clr-surface-alt);
+  background: var(--clr-accent-lt);
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--clr-primary-lt);
+  background: var(--clr-accent);
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(201, 168, 76, 0.3);
+  background: rgba(60, 176, 122, 0.2);
   color: var(--clr-text);
 }
